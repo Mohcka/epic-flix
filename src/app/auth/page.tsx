@@ -127,11 +127,11 @@ const Auth = () => {
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-      <div className="bg-black w-full h-full lg:bg-black/50">
-        <nav className="px-12 py-5">
-          <img src="/images/logo.png" className="h-12" alt="Logo" />
+      <div className="bg-black w-full h-full lg:bg-black/50 relative">
+        <nav className="absolute">
+          {/* <img src="/images/logo.png" className="h-12" alt="Logo" /> */}
         </nav>
-        <div className="flex justify-center">
+        <div className="flex justify-center h-full">
           <div className="bg-black/70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
             <h2 className="text-white text-4xl mb-8 font-semibold">
               {authVariant === "login" ? "Sign in" : "Register"}
@@ -303,15 +303,35 @@ const Auth = () => {
             <div className="flex flex-row items-center gap-4 mt-8 justify-center">
               <div
                 onClick={() => signIn("google", { callbackUrl: "/profiles" })}
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
+                className="
+                w-10
+                h-10
+                bg-white
+                rounded-full
+                flex
+                items-center
+                justify-center
+                cursor-pointer
+                hover:opacity-80
+                transition"
               >
                 <FcGoogle size={32} />
               </div>
               <div
                 onClick={() => signIn("github", { callbackUrl: "/profiles" })}
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
+                className="
+                w-10
+                h-10
+                bg-white
+                rounded-full
+                flex
+                items-center
+                justify-center
+                cursor-pointer
+                hover:opacity-80
+                transition"
               >
-                <FaGithub size={32} />
+                <FaGithub size={32} color="#000" />
               </div>
             </div>
             <p className="text-neutral-500 mt-12">
