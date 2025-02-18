@@ -300,7 +300,7 @@ const Auth = () => {
             >
               {authVariant === "login" ? "Login" : "Sign up"}
             </button>
-            {/* <div className="flex flex-row items-center gap-4 mt-8 justify-center">
+            <div className="flex flex-row items-center gap-4 mt-8 justify-center">
               <div
                 onClick={() => signIn("google", { callbackUrl: "/profiles" })}
                 className="
@@ -333,7 +333,7 @@ const Auth = () => {
               >
                 <FaGithub size={32} color="#000" />
               </div>
-            </div> */}
+            </div>
             <p className="text-neutral-500 mt-12">
               {authVariant === "login"
                 ? "First time using Netflix?"
